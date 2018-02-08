@@ -40,12 +40,12 @@ feh --bg-scale "$_pathFile"
 # MAIN #
 ########
 
-dir="$1"  direction="$2"  conf=~/.confSlideFEH3  type="image" 
+dir="$1"  direction="$2"  conf=~/.confSlideFEH  type="image" 
 FUNCcheckConf "$conf" "$dir"
 number="`cat $conf | tail -n1`"
 
 
-[ "$#" -lt "1" ] || [ "$#" -gt "2" ] && {  echo  "ERROR : args number invalid"/n"cmd path [up/down]" ; exit 1 ; }
+[ "$#" -lt "1" ] || [ "$#" -gt "2" ] && {  echo -e "ERROR : args number invalid \n $0 /path/dir/ [up/down]" ; exit 1 ; }
 [ ! -d "$dir" ] && { echo "ERROR : directory not exist" ; exit 1 ; }
 
 [ ! -f /tmp/slideFeh ] || [ ! -f /tmp/slideHashFeh ] || [ "`ls $dir | md5sum | cut -d" " -f1`" != "`head /tmp/slideHashFeh`" ] && { file  "$dir"*  | grep "image data" | cut -d":" -f1 > /tmp/slideFeh ; echo `ls $dir | md5sum | cut -d" " -f1` > /tmp/slideHashFeh ; }
