@@ -11,11 +11,6 @@ local _conf=$1  _dir=$2
 [ ! "`cat "$_conf" | head -n1`" == "$_dir" ] && {  rm -rf "$_conf" ;  FUNCcheckConf "$_conf" "$_dir" ; }
 
 } 
-#function FUNCcheckImg(){
-#local _pathFile=$1  _type=$2
-#
-#[ "`file -b -i $_pathFile | grep -o "$_type"`" == "$_type" ] &&  return 0 || return 1
-#}
 function FUNCmove(){
 local _conf="$1"  _dir="$2"  _direction="$3" _files="$4"
 local _ligne=`wc -l <<< $_files`  _number=`cat $_conf | tail -n1`
