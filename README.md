@@ -1,4 +1,4 @@
-# slide-feh-wallpaper
+# feh slideshow
 an script for simply change wallpaper with cli
 
 For set next wallpaper of a directory
