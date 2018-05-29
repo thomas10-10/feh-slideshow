@@ -15,7 +15,7 @@ For conserve set wallpaper after reboot add in bashrc
 ```
 slideFEH.sh /dirWithWallpaper/
 ```
-<img src="https://raw.githubusercontent.com/thomas10-10/feh-slideshow/edit/master/README.gif"  />
+<img src="https://raw.githubusercontent.com/thomas10-10/feh-slideshow/master/README.gif"  />
 
 # Other
 The dir may contain any file, the script check if a file is a image
